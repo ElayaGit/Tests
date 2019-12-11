@@ -1,0 +1,69 @@
+INIT
+Das Kommando git init erzeugt ein neues Git-Repository. ... 
+Die meisten anderen Git-Befehle sind außerhalb eines initialisierten Repositorys nicht verfügbar; 
+git init ist normalerweise das erste Kommando, das in einem neuen Projekt ausgeführt wird. git init erzeugt ein.
+
+CONFIG
+Definiert die E-Mail des Autors, die für alle Commits des aktuellen Users genutzt wird. 
+Erzeugt einen Shortcut für einen Git-Befehl. 
+Definiert den Text-Editor, der von Befehlen wie git commit genutzt wird, für alle Nutzer der aktuellen Maschine.
+
+CLONE
+erstelle eine Arbeitskopie, indem du folgenden Befehl ausführst:
+git clone /pfad/zum/repository
+Falls du ein entferntes Repository verwendest, benutze:
+git clone benutzername@host:/pfad/zum/repository
+
+ADD
+Du kannst Änderungen vorschlagen (zum Index hinzufügen) mit
+git add <dateiname>
+git add *
+
+rm
+git-rm - Entfernt Dateien aus dem Arbeitsbaum und aus dem Index
+
+commit
+Das ist der erste Schritt im git workflow, du bestätigst deine Änderungen mit:
+git commit -m "Commit-Nachricht"
+Jetzt befindet sich die Änderung im HEAD, aber noch nicht im entfernten Repository. 
+
+remote 
+Liste der Bereiche von git
+
+push
+Damit der Commit und die Änderungen auch für Teamkollegen sichtbar werden, muss der GitHub-Server aktualisiert werden. Das geschieht via
+git push
+
+pull und merge
+Um dein lokales Repository mit den neuesten Änderungen zu aktualisieren, verwende:
+git pull
+in deiner Arbeitskopie, um die Änderungen erst herunterzuladen (fetch) und dann mit deinem Stand zusammenzuführen (merge).
+Wenn du einen anderen Branch mit deinem aktuellen (z.B. master) zusammenführen willst, benutze:
+git merge <branch>
+In beiden Fällen versucht git die Änderungen automatisch zusammenzuführen. 
+Unglücklicherweise ist dies nicht immer möglich und endet in Konflikten. 
+Du bist verantwortlich, diese Konflikte durch manuelles Editieren der betroffenen Dateien zu lösen.
+
+status
+Ihr solltet jetzt entweder ein geklontes Repo oder ein selbst erstelltes Repo vor euch haben. Ein wichtiges Kommando im Umgang mit Git ist
+git status
+Es gibt euch einige Informationen zum aktuellen Stand, z.B. ob Änderungen noch nicht “commited” wurden oder welcher Branch gerade aktiv ist.
+
+diff
+it-diff - Zeigt Änderungen zwischen Commit, Commit und Arbeitsbaum usw. an
+
+reset
+usammenfassung. Zur Überprüfung ist git reset ein leistungsstarker Befehl, mit dem lokale Änderungen am Status eines Git-Repos 
+rückgängig gemacht werden können. Das Zurücksetzen von Git funktioniert auf "Die drei Bäume von Git". 
+Diese Strukturen sind der Commit-Verlauf (HEAD), der Staging-Index und das Arbeitsverzeichnis.
+
+log
+git-log - Commit-Protokolle anzeigen
+
+branch
+Auflisten von Zweigen (der Stern kennzeichnet den aktuellen Zweig)
+
+checkout
+git-checkout - Wechselt zwischen Zweigen oder stellt funktionierende Baumdateien wieder her
+
+
